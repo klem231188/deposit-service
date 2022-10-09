@@ -6,6 +6,7 @@ import com.glady.deposit.model.contract.User;
 import com.glady.deposit.service.BalanceService;
 import com.glady.deposit.service.DepositService;
 import com.glady.deposit.service.UserService;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -98,7 +99,7 @@ public class DepositController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "The deposits found", content = {@Content(schema = @Schema(implementation = Deposit.class))}),
+            @ApiResponse(responseCode = "200", description = "The deposits found", content = {@Content(array = @ArraySchema(schema = @Schema(implementation = Deposit.class)))}),
             @ApiResponse(responseCode = "400", description = "Invalid input", content = @Content),
             @ApiResponse(responseCode = "415", description = "Invalid media type", content = @Content),
             @ApiResponse(responseCode = "500", description = "Internal server error", content = @Content)
