@@ -44,10 +44,10 @@ Some unit and integration tests are available on test/java folder.
 - Implement one or two functions allowing companies to distribute gift and meal deposits to a user if the company
   balance allows it.
     - On swagger ui, please use POST api/v1/deposits
-      ![](doc/create-deposit.png "Create Deposit")
+    - ![](doc/create-deposit.png "Create Deposit")
 - Implement a function to calculate the user's balance.
     - Please use GET api/v1/deposits?userId=...
     - Then api client must map + reduce the deposit list to get the current balance
     - Example in DepositServiceApplicationTests.shouldAddMultipleDeposits()
     - // 6/ Calculate the tesla-user1-uuid balance
-      ![](doc/get-deposits.png "Get Deposits")
+    - ![](doc/get-deposits.png "Get Deposits")
